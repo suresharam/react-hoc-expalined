@@ -12,7 +12,7 @@ const withData = (WrappedComponent) => {
 
     componentDidMount() {
       setTimeout(() => {
-        fetch(this.props.datasrouce)
+        fetch(this.props.datasource)
           .then((response) => response.json())
           .then((data) => this.setState({ data }));
       }, 1500);
