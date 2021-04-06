@@ -4,13 +4,14 @@ import UserProfile from "./components/user-profile/UserProfile";
 import "./App.scss";
 
 function App() {
+  const hostname = "https://jsonplaceholder.typicode.com";
   return (
     <div className="App">
-      <UserList datasource="https://jsonplaceholder.typicode.com/users" />
+      <UserList datasource={`${hostname}/users`}/>
       <UserProfile
         name="Suresha Ram"
         email="suriram.sam@gmail.com"
-        datasource="https://jsonplaceholder.typicode.com/posts"
+        datasource={`${hostname}/posts`}
       />
     </div>
   );
